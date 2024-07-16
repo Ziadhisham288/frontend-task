@@ -21,7 +21,7 @@ const CustomerDetails = () => {
   const getCustomerData = async () => {
     try {
       const { data } = await axios.get(
-        `https://server-iota-murex.vercel.app/customers/${params.id}`, {
+        `https://server-iota-murex.vercel.app/api/customers/${params.id}`, {
           headers: {
             'Cache-Control': 'no-cache'
           }
