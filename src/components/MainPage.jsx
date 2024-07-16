@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CustomerRow from "./CustomerRow.jsx";
-import Data from '.../Data.js'
+import Data from '../Data.js'
 
 const MainPage = () => {
   const [customers, setCustomers] = useState(Data.customers);

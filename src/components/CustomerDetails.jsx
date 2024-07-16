@@ -11,6 +11,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import Data from '../Data.js'
 
 const CustomerDetails = () => {
   const [customer, setCustomer] = useState(null);
