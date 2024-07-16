@@ -16,7 +16,7 @@ function App() {
     }
   ]);
 
-  return <RouterProvider router={router} basename="/frontend-task"  ></RouterProvider>;
+  return <RouterProvider router={router} ></RouterProvider>;
 }
 
 export default App;
