@@ -8,7 +8,7 @@ const MainPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const getBankData = async () => {
-    const { data } = await axios.get("https://server-iota-murex.vercel.app/api/customers");
+    const { data } = await axios.get("https://server-iota-murex.vercel.app/customers");
     const response = data.Data;
     setCustomers(response.customers);
     setTransactions(response.transactions);
