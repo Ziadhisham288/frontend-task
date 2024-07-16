@@ -20,7 +20,7 @@ const CustomerRow = ({ customer_id, name, amount, date }) => {
       <td className="py-3 px-6 text-center text-green-600 font-semibold">{amount}</td>
       <td className="text-center py-3 px-6">
         <Link
-          to={`/customers/${customer_id}`}
+          to={`/customer/${customer_id}`}
           className="rounded-lg py-2 px-10 bg-gray-900 text-white hover:bg-green-600"
         >
           Customer details

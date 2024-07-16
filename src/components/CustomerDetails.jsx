@@ -27,8 +27,8 @@ const CustomerDetails = () => {
           }
         }
       );
-      setCustomer(data.customer[0]);
-      setTransactions(data.transactions);
+      setCustomer(data?.customer[0]);
+      setTransactions(data?.transactions);
     } catch (error) {
       console.error("Error fetching customer data:", error);
     }
