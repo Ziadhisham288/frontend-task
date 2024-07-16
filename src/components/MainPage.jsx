@@ -1,21 +1,14 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CustomerRow from "./CustomerRow.jsx";
+import Data from '.../Data.js'
 
 const MainPage = () => {
-  const [customers, setCustomers] = useState([]);
-  const [transactions, setTransactions] = useState([]);
+  const [customers, setCustomers] = useState(Data.customers);
+  const [transactions, setTransactions] = useState(Data.transactions);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const getBankData = async () => {
-    const { data } = await axios.get("https://server-iota-murex.vercel.app/api/customers");
-    const response = data.Data;
-    setCustomers(response.customers);
-    setTransactions(response.transactions);
-  };
-
   const getCustomerName = (id) => {
-    const customer = customers.find((customer) => id == customer.id);
+    const customer = customers.find((customer) => id === customer.id);
     return customer ? customer.name : "Unknown";
   };
 
@@ -29,10 +22,6 @@ const MainPage = () => {
     const query = searchQuery.toLowerCase();
     return customerName.includes(query) || transactionAmount.includes(query);
   });
-
-  useEffect(() => {
-    getBankData();
-  }, []);
 
   return (
     <main className="min-h-screen bg-slate-100">
